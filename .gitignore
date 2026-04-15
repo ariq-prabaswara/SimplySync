@@ -5,3 +5,7 @@ simplysync.exe
 sync.toml
 sync-state.json
 sync.log
+
+# Internal folders
+docs/
+.claude/
