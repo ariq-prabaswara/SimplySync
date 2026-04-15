@@ -23,7 +23,7 @@ func main() {
 		waitAndExit(1)
 	}
 
-	fmt.Printf("ObsidianSync v%s\n", version)
+	fmt.Printf("SimplySync v%s\n", version)
 	fmt.Printf("Source:      %s\n", cfg.Paths.Source)
 	fmt.Printf("Destination: %s\n\n", cfg.Paths.Destination)
 

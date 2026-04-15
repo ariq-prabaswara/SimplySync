@@ -1,8 +1,8 @@
-# ObsidianSync
+# SimplySync
 
 A lightweight Windows tool that performs two-way sync between a local [Obsidian](https://obsidian.md) vault and an iCloud Drive folder. Run it on demand — no background daemon, no watch mode.
 
-![icon](obsync.ico)
+![icon](simplysync.ico)
 
 ---
 
@@ -27,8 +27,8 @@ A snapshot (`sync-state.json`) is saved after every successful sync to track del
 ## Files
 
 ```
-ObsidianSync/
-├── obsync.exe          ← run this to sync
+SimplySync/
+├── simplysync.exe      ← run this to sync
 ├── sync.toml           ← configure your paths and ignore patterns
 ├── sync-state.json     ← auto-managed snapshot (do not edit)
 └── sync.log            ← running log of all sync operations
@@ -42,8 +42,8 @@ Edit `sync.toml` to set your source and destination paths, and any folder/file n
 
 ```toml
 [paths]
-source      = 'C:\Ariq\Jade Chamber\Obsidian'
-destination = 'C:\Users\rifar\iCloudDrive\iCloud~md~obsidian\Jade Chamber'
+source      = 'C:\path\to\your\ObsidianVault'
+destination = 'C:\Users\you\iCloudDrive\iCloud~md~obsidian\YourVault'
 
 [ignore]
 patterns = [
@@ -60,12 +60,12 @@ Ignore patterns match against individual path components (folder or file names).
 
 ## Usage
 
-Double-click `obsync.exe` (or the desktop shortcut). The console window shows what's happening:
+Double-click `simplysync.exe` (or the desktop shortcut). The console window shows what's happening:
 
 ```
-ObsidianSync v1.0
-Source:      C:\Ariq\Jade Chamber\Obsidian
-Destination: C:\Users\rifar\iCloudDrive\iCloud~md~obsidian\Jade Chamber
+SimplySync v1.0
+Source:      C:\path\to\your\ObsidianVault
+Destination: C:\Users\you\iCloudDrive\iCloud~md~obsidian\YourVault
 
 Scanning...
 
@@ -97,20 +97,20 @@ Errors (locked files, permission denied) are logged and skipped — the rest of 
 Requires [Go 1.21+](https://go.dev/dl/).
 
 ```bash
-git clone https://github.com/ariq-prabaswara/ObsidianSync.git
-cd ObsidianSync
+git clone https://github.com/ariq-prabaswara/SimplySync.git
+cd SimplySync
 go mod download
-go build -o obsync.exe .
+go build -o simplysync.exe .
 ```
 
 ### Desktop shortcut (optional)
 
 ```powershell
 $ws = New-Object -ComObject WScript.Shell
-$s = $ws.CreateShortcut("$env:USERPROFILE\Desktop\ObsidianSync.lnk")
-$s.TargetPath = "$PWD\obsync.exe"
+$s = $ws.CreateShortcut("$env:USERPROFILE\Desktop\SimplySync.lnk")
+$s.TargetPath = "$PWD\simplysync.exe"
 $s.WorkingDirectory = "$PWD"
-$s.IconLocation = "$PWD\obsync.ico,0"
+$s.IconLocation = "$PWD\simplysync.ico,0"
 $s.Save()
 ```
 

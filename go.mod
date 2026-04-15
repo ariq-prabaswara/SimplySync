@@ -1,4 +1,4 @@
-module obsync
+module simplysync
 
 go 1.26.2
 
