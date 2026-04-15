@@ -1,0 +1,7 @@
+# Compiled binary
+obsync.exe
+
+# Runtime files (auto-generated or contain personal paths)
+sync.toml
+sync-state.json
+sync.log

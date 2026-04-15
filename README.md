@@ -97,7 +97,7 @@ Errors (locked files, permission denied) are logged and skipped — the rest of 
 Requires [Go 1.21+](https://go.dev/dl/).
 
 ```bash
-git clone https://github.com/yourusername/ObsidianSync.git
+git clone https://github.com/ariq-prabaswara/ObsidianSync.git
 cd ObsidianSync
 go mod download
 go build -o obsync.exe .
