@@ -1,6 +1,6 @@
 # SimplySync
 
-A lightweight Windows tool that performs two-way sync between a local [Obsidian](https://obsidian.md) vault and an iCloud Drive folder. Run it on demand — no background daemon, no watch mode.
+I made this tool to perform two-way sync between a local [Obsidian](https://obsidian.md) vault and an iCloud Drive folder. Run it on demand — no background daemon, no watch mode.
 
 ![icon](simplysync.ico)
 
