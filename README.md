@@ -38,7 +38,7 @@ SimplySync/
 
 ## Configuration
 
-Edit `sync.toml` to set your source and destination paths, and any folder/file names to ignore:
+Create, Copy, and Edit this text as `sync.toml` to set your source and destination paths, and any folder/file names to ignore:
 
 ```toml
 [paths]
@@ -47,10 +47,8 @@ destination = 'C:\Users\you\iCloudDrive\iCloud~md~obsidian\YourVault'
 
 [ignore]
 patterns = [
-    ".stfolder",
-    ".stignore",
-    ".stversions",
-    ".data",
+    "*.py"
+    ".folder",
 ]
 ```
 
