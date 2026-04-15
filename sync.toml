@@ -1,0 +1,11 @@
+[paths]
+source      = 'C:\Ariq\Jade Chamber\Obsidian'
+destination = 'C:\Users\rifar\iCloudDrive\iCloud~md~obsidian\Jade Chamber'
+
+[ignore]
+patterns = [
+    ".stfolder",
+    ".stignore",
+    ".stversions",
+    ".data",
+]
